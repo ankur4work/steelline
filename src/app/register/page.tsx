@@ -58,7 +58,7 @@ export default function RegisterPage() {
         <div className="absolute top-1/3 left-1/3 w-[400px] h-[400px] bg-[#4f72f8]/10 rounded-full blur-[100px] pointer-events-none" />
 
         <Link href="/" className="relative z-10">
-          <Image src="/logo.jpeg" alt="SteelLine Logistics" width={150} height={60} className="h-12 w-auto object-contain" />
+          <Image src="/logo.png" alt="SteelLine Logistics" width={150} height={60} className="h-12 w-auto object-contain" />
         </Link>
 
         <div className="relative z-10">
@@ -94,7 +94,7 @@ export default function RegisterPage() {
       <div className="flex-1 flex items-center justify-center p-6 bg-[#0a0e18]">
         <div className="w-full max-w-md">
           <Link href="/" className="lg:hidden flex justify-center mb-8">
-            <Image src="/logo.jpeg" alt="SteelLine Logistics" width={150} height={60} className="h-12 w-auto object-contain" />
+            <Image src="/logo.png" alt="SteelLine Logistics" width={150} height={60} className="h-12 w-auto object-contain" />
           </Link>
 
           <div className="bg-[#0f1520] border border-white/6 rounded-2xl p-8 shadow-2xl shadow-black/40">
