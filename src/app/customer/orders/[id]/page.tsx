@@ -54,7 +54,7 @@ export default async function OrderDetailPage({ params }: { params: Promise<{ id
               style={{ width: `${(currentStep / (statusOrder.length - 1)) * 100}%` }}
             />
             <div className="relative flex justify-between">
-              {statusOrder.map((s, i) => {
+              {statusOrder.map((s: string, i: number) => {
                 const sInfo = BOOKING_STATUSES[s as keyof typeof BOOKING_STATUSES];
                 const done = i <= currentStep;
                 const active = i === currentStep;
@@ -152,7 +152,7 @@ export default async function OrderDetailPage({ params }: { params: Promise<{ id
           <Clock className="w-4 h-4 text-[#4f72f8]" /> Status Timeline
         </h3>
         <div className="space-y-4">
-          {booking.statusUpdates.map((update, i) => {
+          {booking.statusUpdates.map((update: (typeof booking.statusUpdates)[number], i: number) => {
             const s = BOOKING_STATUSES[update.status as keyof typeof BOOKING_STATUSES];
             const isLatest = i === booking.statusUpdates.length - 1;
             return (

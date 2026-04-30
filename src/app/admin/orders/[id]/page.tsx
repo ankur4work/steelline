@@ -99,7 +99,7 @@ export default async function AdminOrderDetailPage({ params }: { params: Promise
           <div className={cardClass}>
             <h3 className="font-bold text-white mb-4 text-sm">Status Timeline</h3>
             <div className="space-y-4">
-              {booking.statusUpdates.map((update, i) => {
+              {booking.statusUpdates.map((update: (typeof booking.statusUpdates)[number], i: number) => {
                 const s = BOOKING_STATUSES[update.status as keyof typeof BOOKING_STATUSES];
                 return (
                   <div key={update.id} className="flex gap-3">
@@ -127,7 +127,7 @@ export default async function AdminOrderDetailPage({ params }: { params: Promise
         <div>
           <AdminOrderActions
             booking={{ id: booking.id, status: booking.status, driverId: booking.driverId }}
-            drivers={drivers.map(d => ({ id: d.id, name: d.user.name, vehicleNo: d.vehicleNo, vehicleType: d.vehicleType }))}
+            drivers={drivers.map((d: (typeof drivers)[number]) => ({ id: d.id, name: d.user.name, vehicleNo: d.vehicleNo, vehicleType: d.vehicleType }))}
             currentDriver={booking.driver ? { name: booking.driver.user.name, phone: booking.driver.user.phone, vehicleNo: booking.driver.vehicleNo } : null}
           />
         </div>
