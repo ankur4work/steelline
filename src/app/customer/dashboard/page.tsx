@@ -22,9 +22,9 @@ export default async function CustomerDashboard() {
   ]);
 
   const total = bookings.length > 0 ? await prisma.booking.count({ where: { customerId: session!.user.id } }) : 0;
-  const active = counts.find(c => c.status === "IN_TRANSIT")?._count || 0;
-  const delivered = counts.find(c => c.status === "DELIVERED")?._count || 0;
-  const pending = counts.find(c => c.status === "PENDING")?._count || 0;
+  const active = counts.find((c: (typeof counts)[number]) => c.status === "IN_TRANSIT")?._count || 0;
+  const delivered = counts.find((c: (typeof counts)[number]) => c.status === "DELIVERED")?._count || 0;
+  const pending = counts.find((c: (typeof counts)[number]) => c.status === "PENDING")?._count || 0;
 
   return (
     <div className="max-w-5xl mx-auto">
