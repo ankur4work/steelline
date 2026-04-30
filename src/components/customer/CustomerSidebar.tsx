@@ -28,7 +28,7 @@ export default function CustomerSidebar({ user }: CustomerSidebarProps) {
       {/* Logo */}
       <div className="p-5 border-b border-white/5">
         <Link href="/">
-          <Image src="/logo.png" alt="SteelLine Logistics" width={120} height={48} className="h-40 w-auto object-contain" />
+          <Image src="/logo.png" alt="SteelLine Logistics" width={120} height={48} className="h-[40px] w-auto object-contain" />
         </Link>
       </div>
 
@@ -97,7 +97,7 @@ export default function CustomerSidebar({ user }: CustomerSidebarProps) {
           {mobileOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
         </button>
         <Link href="/" className="ml-3">
-          <Image src="/logo.png" alt="SteelLine Logistics" width={100} height={40} className="h-28 w-auto object-contain" />
+          <Image src="/logo.png" alt="SteelLine Logistics" width={100} height={40} className="h-[40px] w-auto object-contain" />
         </Link>
         <div className="ml-auto text-xs text-white/30">{user.name?.split(" ")[0]}</div>
       </div>
