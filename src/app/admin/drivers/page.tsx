@@ -23,7 +23,7 @@ export default async function AdminDriversPage() {
       </div>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-        {drivers.map(driver => (
+        {drivers.map((driver: (typeof drivers)[number]) => (
           <div key={driver.id} className="bg-[#0f1520] border border-white/6 rounded-2xl p-5 hover:border-[#4f72f8]/20 transition-colors">
             <div className="flex items-center gap-3 mb-4">
               <div className="w-11 h-11 bg-[#4f72f8] rounded-2xl flex items-center justify-center text-white font-black text-lg flex-shrink-0">

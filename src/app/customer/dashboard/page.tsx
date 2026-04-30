@@ -80,7 +80,7 @@ export default async function CustomerDashboard() {
           </div>
         ) : (
           <div className="divide-y divide-white/4">
-            {bookings.map(booking => {
+            {bookings.map((booking: (typeof bookings)[number]) => {
               const status = BOOKING_STATUSES[booking.status as keyof typeof BOOKING_STATUSES];
               return (
                 <Link

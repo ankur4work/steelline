@@ -38,7 +38,7 @@ export default async function CustomerOrdersPage() {
         </div>
       ) : (
         <div className="space-y-3">
-          {bookings.map(booking => {
+          {bookings.map((booking: (typeof bookings)[number]) => {
             const status = BOOKING_STATUSES[booking.status as keyof typeof BOOKING_STATUSES];
             return (
               <Link

@@ -96,7 +96,7 @@ export default async function AdminDashboard() {
                 </tr>
               </thead>
               <tbody className="divide-y divide-white/4">
-                {recentBookings.map(booking => {
+                {recentBookings.map((booking: (typeof recentBookings)[number]) => {
                   const status = BOOKING_STATUSES[booking.status as keyof typeof BOOKING_STATUSES];
                   return (
                     <tr key={booking.id} className="hover:bg-white/3 transition-colors">

@@ -91,7 +91,7 @@ export default async function AdminOrdersPage({ searchParams }: { searchParams: 
                 </tr>
               </thead>
               <tbody className="divide-y divide-white/4">
-                {bookings.map(booking => {
+                {bookings.map((booking: (typeof bookings)[number]) => {
                   const st = BOOKING_STATUSES[booking.status as keyof typeof BOOKING_STATUSES];
                   return (
                     <tr key={booking.id} className="hover:bg-white/3 transition-colors">
