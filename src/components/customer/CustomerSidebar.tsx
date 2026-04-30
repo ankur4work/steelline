@@ -27,8 +27,8 @@ export default function CustomerSidebar({ user }: CustomerSidebarProps) {
     <div className="flex flex-col h-full">
       {/* Logo */}
       <div className="p-5 border-b border-white/5">
-        <Link href="/" className="bg-white rounded-xl px-2 py-1 inline-flex">
-          <Image src="/logo.png" alt="SteelLine Logistics" width={120} height={48} className="h-8 w-auto object-contain" />
+        <Link href="/">
+          <Image src="/logo.png" alt="SteelLine Logistics" width={120} height={48} className="h-9 w-auto object-contain" />
         </Link>
       </div>
 
@@ -96,8 +96,8 @@ export default function CustomerSidebar({ user }: CustomerSidebarProps) {
         <button onClick={() => setMobileOpen(!mobileOpen)} className="text-white/60 hover:text-white p-1.5 rounded-lg hover:bg-white/5 transition-all">
           {mobileOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
         </button>
-        <Link href="/" className="ml-3 bg-white rounded-lg px-1.5 py-0.5 inline-flex">
-          <Image src="/logo.png" alt="SteelLine Logistics" width={100} height={40} className="h-6 w-auto object-contain" />
+        <Link href="/" className="ml-3">
+          <Image src="/logo.png" alt="SteelLine Logistics" width={100} height={40} className="h-7 w-auto object-contain" />
         </Link>
         <div className="ml-auto text-xs text-white/30">{user.name?.split(" ")[0]}</div>
       </div>

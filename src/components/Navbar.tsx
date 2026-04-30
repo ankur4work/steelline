@@ -48,8 +48,8 @@ export default function Navbar() {
         <div className="flex items-center justify-between h-[72px]">
 
           {/* Logo */}
-          <Link href="/" className="flex items-center bg-white rounded-xl px-2 py-1">
-            <Image src="/logo.png" alt="SteelLine Logistics" width={120} height={48} className="h-9 w-auto object-contain" priority />
+          <Link href="/" className="flex items-center">
+            <Image src="/logo.png" alt="SteelLine Logistics" width={140} height={56} className="h-11 w-auto object-contain" priority />
           </Link>
 
           {/* Desktop Nav */}
