@@ -1,0 +1,67 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+}
+
+model User {
+  id        String   @id @default(cuid())
+  name      String
+  email     String   @unique
+  password  String
+  phone     String?
+  role      String   @default("CUSTOMER")
+  bookings  Booking[]
+  driver    Driver?
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model Driver {
+  id          String    @id @default(cuid())
+  userId      String    @unique
+  user        User      @relation(fields: [userId], references: [id], onDelete: Cascade)
+  licenseNo   String
+  vehicleType String
+  vehicleNo   String
+  isAvailable Boolean   @default(true)
+  bookings    Booking[]
+  createdAt   DateTime  @default(now())
+  updatedAt   DateTime  @updatedAt
+}
+
+model Booking {
+  id              String         @id @default(cuid())
+  bookingNo       String         @unique
+  customerId      String
+  customer        User           @relation(fields: [customerId], references: [id])
+  driverId        String?
+  driver          Driver?        @relation(fields: [driverId], references: [id])
+  pickupAddress   String
+  deliveryAddress String
+  pickupCity      String
+  deliveryCity    String
+  cargoType       String
+  cargoWeight     Float
+  truckType       String
+  scheduledDate   DateTime
+  estimatedPrice  Float?
+  status          String         @default("PENDING")
+  notes           String?
+  statusUpdates   StatusUpdate[]
+  createdAt       DateTime       @default(now())
+  updatedAt       DateTime       @updatedAt
+}
+
+model StatusUpdate {
+  id        String   @id @default(cuid())
+  bookingId String
+  booking   Booking  @relation(fields: [bookingId], references: [id], onDelete: Cascade)
+  status    String
+  message   String
+  location  String?
+  updatedBy String?
+  createdAt DateTime @default(now())
+}
