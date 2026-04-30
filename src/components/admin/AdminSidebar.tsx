@@ -27,7 +27,7 @@ export default function AdminSidebar({ user }: AdminSidebarProps) {
       {/* Logo */}
       <div className="px-5 py-4 border-b border-white/5 flex items-center justify-between">
         <Link href="/">
-          <Image src="/logo.png" alt="SteelLine Logistics" width={120} height={48} className="h-14 w-auto object-contain" />
+          <Image src="/logo.png" alt="SteelLine Logistics" width={120} height={48} className="h-40 w-auto object-contain" />
         </Link>
         <button className="lg:hidden text-white/40 hover:text-white" onClick={() => setMobileOpen(false)}>
           <X className="w-5 h-5" />
@@ -101,7 +101,7 @@ export default function AdminSidebar({ user }: AdminSidebarProps) {
           <Menu className="w-4.5 h-4.5" />
         </button>
         <Link href="/">
-          <Image src="/logo.png" alt="SteelLine Logistics" width={100} height={40} className="h-12 w-auto object-contain" />
+          <Image src="/logo.png" alt="SteelLine Logistics" width={100} height={40} className="h-28 w-auto object-contain" />
         </Link>
         <span className="ml-auto text-xs text-white/30 bg-white/5 border border-white/8 px-2 py-1 rounded-lg">Admin</span>
       </div>

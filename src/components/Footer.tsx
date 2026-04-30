@@ -11,7 +11,7 @@ export default function Footer() {
           {/* Brand */}
           <div className="md:col-span-1">
             <Link href="/" className="flex items-center mb-4">
-              <Image src="/logo.png" alt="SteelLine Logistics" width={140} height={56} className="h-16 w-auto object-contain" />
+              <Image src="/logo.png" alt="SteelLine Logistics" width={140} height={56} className="h-40 w-auto object-contain" />
             </Link>
             <p className="text-white/35 text-sm leading-relaxed mb-5">
               India&apos;s trusted freight and logistics partner. Delivering reliability, efficiency, and safety across the nation since 2008.
