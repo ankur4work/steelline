@@ -116,7 +116,7 @@ export default function HomePage() {
 
             {/* Right: Hero Image Card */}
             <div className="relative">
-              <div className="relative rounded-3xl overflow-hidden border border-white/8 shadow-2xl shadow-black/60 group cursor-pointer">
+              <div className="hero-card-3d relative rounded-3xl overflow-hidden border border-white/8 shadow-2xl shadow-black/60 group cursor-pointer">
                 <div className="relative h-[480px] md:h-[520px]">
                   <Image src={IMGS.hero} alt="Steelline fleet" fill className="object-cover transition-transform duration-700 group-hover:scale-110" priority />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent group-hover:from-black/20 transition-all duration-700" />
@@ -144,27 +144,32 @@ export default function HomePage() {
       </section>
 
       {/* ── STATS BAR ───────────────────────────────────── */}
-      <section className="border-y border-white/5 bg-[#0d1117]">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-            {[
-              { label: "Shipments Delivered", value: "50,000+", icon: Package },
-              { label: "Happy Clients",        value: "5,000+",  icon: Users   },
-              { label: "Cities Covered",       value: "200+",    icon: MapPin  },
-              { label: "Years Experience",     value: "15+",     icon: Award   },
-            ].map(({ label, value, icon: Icon }) => (
-              <div key={label} className="flex items-center gap-3">
-                <div className="w-10 h-10 bg-[#4f72f8]/10 border border-[#4f72f8]/20 rounded-xl flex items-center justify-center flex-shrink-0">
-                  <Icon className="w-4.5 h-4.5 text-[#4f72f8]" />
+      <section className="border-y border-white/5 bg-[#0d1117] overflow-hidden py-8">
+        {(() => {
+          const stats = [
+            { label: "Shipments Delivered", value: "50,000+", icon: Package },
+            { label: "Happy Clients",        value: "5,000+",  icon: Users   },
+            { label: "Cities Covered",       value: "200+",    icon: MapPin  },
+            { label: "Years Experience",     value: "15+",     icon: Award   },
+          ];
+          const items = [...stats, ...stats];
+          return (
+            <div className="animate-marquee flex gap-16 w-max">
+              {items.map(({ label, value, icon: Icon }, i) => (
+                <div key={i} className="flex items-center gap-3 flex-shrink-0">
+                  <div className="w-10 h-10 bg-[#4f72f8]/10 border border-[#4f72f8]/20 rounded-xl flex items-center justify-center flex-shrink-0">
+                    <Icon className="w-4 h-4 text-[#4f72f8]" />
+                  </div>
+                  <div>
+                    <div className="text-xl font-black text-white">{value}</div>
+                    <div className="text-white/35 text-xs">{label}</div>
+                  </div>
+                  <span className="ml-8 w-px h-8 bg-white/8 flex-shrink-0" />
                 </div>
-                <div>
-                  <div className="text-xl font-black text-white">{value}</div>
-                  <div className="text-white/35 text-xs">{label}</div>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
+              ))}
+            </div>
+          );
+        })()}
       </section>
 
       {/* ── BRAND STORY ─────────────────────────────────── */}
@@ -234,7 +239,7 @@ export default function HomePage() {
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
             {services.map(({ icon: Icon, title, desc, img }) => (
-              <div key={title} className="bg-[#0f1520] border border-white/6 rounded-2xl overflow-hidden hover:border-[#4f72f8]/30 hover:-translate-y-1 transition-all duration-300 group">
+              <div key={title} className="service-card-fx bg-[#0f1520] border border-white/6 rounded-2xl group">
                 <div className="relative h-44 overflow-hidden">
                   <Image src={img} alt={title} fill className="object-cover group-hover:scale-105 transition-transform duration-500 brightness-75" />
                   <div className="absolute inset-0 bg-gradient-to-t from-[#0f1520] via-[#0f1520]/40 to-transparent" />
