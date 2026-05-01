@@ -45,11 +45,11 @@ export default function Navbar() {
         : "bg-transparent"
     }`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-[72px]">
+        <div className="flex items-center justify-between h-[88px]">
 
           {/* Logo */}
-          <Link href="/" className="flex items-center">
-            <Image src="/logo.png" alt="SteelLine Logistics" width={140} height={56} className="h-[68px] w-auto object-contain" priority />
+          <Link href="/" className="flex items-center justify-center h-full">
+            <Image src="/logo.png" alt="SteelLine Logistics" width={200} height={80} className="h-[80px] w-auto object-contain" priority />
           </Link>
 
           {/* Desktop Nav */}
