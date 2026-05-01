@@ -116,10 +116,10 @@ export default function HomePage() {
 
             {/* Right: Hero Image Card */}
             <div className="relative">
-              <div className="relative rounded-3xl overflow-hidden border border-white/8 shadow-2xl shadow-black/60">
+              <div className="relative rounded-3xl overflow-hidden border border-white/8 shadow-2xl shadow-black/60 group cursor-pointer">
                 <div className="relative h-[480px] md:h-[520px]">
-                  <Image src={IMGS.hero} alt="Steelline fleet" fill className="object-cover" priority />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent" />
+                  <Image src={IMGS.hero} alt="Steelline fleet" fill className="object-cover transition-transform duration-700 group-hover:scale-110" priority />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent group-hover:from-black/20 transition-all duration-700" />
                 </div>
                 {/* Floating badge */}
                 <div className="absolute bottom-5 right-5 bg-[#0f1520]/90 backdrop-blur-md border border-white/10 rounded-2xl px-4 py-3 flex items-center gap-3">
