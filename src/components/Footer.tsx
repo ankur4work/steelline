@@ -60,7 +60,7 @@ export default function Footer() {
             <ul className="space-y-3 text-white/40 text-sm">
               <li className="flex items-start gap-2.5">
                 <MapPin className="w-4 h-4 text-[#4f72f8] mt-0.5 flex-shrink-0" />
-                <span>123 Industrial Area, Sector 5, Mumbai, Maharashtra 400001</span>
+                <span>Shop 6, Daulatsinghpura, Neemrana, Rajasthan – 301705</span>
               </li>
               <li className="flex items-center gap-2.5">
                 <Phone className="w-4 h-4 text-[#4f72f8] flex-shrink-0" />
@@ -68,7 +68,7 @@ export default function Footer() {
               </li>
               <li className="flex items-center gap-2.5">
                 <Mail className="w-4 h-4 text-[#4f72f8] flex-shrink-0" />
-                <a href="mailto:info@steellinelogistics.in" className="hover:text-white transition-colors">info@steellinelogistics.in</a>
+                <a href="mailto:support@steellinelogistics.in" className="hover:text-white transition-colors">support@steellinelogistics.in</a>
               </li>
             </ul>
           </div>

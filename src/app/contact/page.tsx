@@ -4,10 +4,10 @@ import { Phone, Mail, MapPin, Clock, MessageSquare, ArrowRight } from "lucide-re
 
 const offices = [
   {
-    city: "Mumbai (HQ)",
-    address: "Plot 42, MIDC Industrial Area, Andheri East, Mumbai – 400093",
+    city: "Neemrana (HQ)",
+    address: "Shop 6, Daulatsinghpura, Neemrana, Rajasthan – 301705",
     phone: "+91 98765 43210",
-    email: "mumbai@steelline.in",
+    email: "support@steellinelogistics.in",
   },
   {
     city: "Delhi",
